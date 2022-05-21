@@ -1,24 +1,33 @@
 html {
     direction: rtl;
     scroll-behavior: smooth;
-    --bg-color:#011521;
-    --primary-color:#011E30;
-    --secondary-color:#043355;
-    --text-color:white;
-    --text-color-disabled:rgb(131, 130, 130);
-    --enabled-btn-shadow:#02141d;
-    --disabled-btn:#09283f;
+
+    --bg-color: #F2F2F2;
+    --primary-color: #262626;
+    --secondary-color: #E4E3E5;
+
+    /* Header color */
+    --text-header-color: #262626;
+
+
+    /* Text colors */
+    --text-color: #F2F2F2;
+    --dar-text-color: black;
+
+    /* Button colors */
+    --enabled-btn: #3C3B40;
+    --disabled-btn: #302f32;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg-color);
+.logo {
+    display: block;
+    margin: 0 auto;
 }
 
 .display-2 {
-    animation: display-2 450ms ease-in;
+    animation: display-2 950ms ease-in;
     word-spacing: 12px;
+    color: var(--text-header-color) !important;
 }
 
 h1,
@@ -37,12 +46,36 @@ th,
 tr,
 thead {
     font-family: 'Tajawal';
-    color: white;
     text-align: right;
 }
+a{
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 100ms ease-in-out;
+}
+a:hover{
+    color: rgb(193, 191, 191);
+    text-decoration: underline rgb(193, 191, 191);
+    transform: scale(1.02);
+
+}
+p{
+    color: var(--text-color) !important;
+}
+table,th,tr,td,select{
+    color: var(--text-color);
+}
+
+
+input:focus, select:focus {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
+
 
 .client-data-form {
-    background-color: var(--primary-color)!important;
+    background-color: var(--primary-color) !important;
     border-radius: 10px;
 }
 
@@ -52,42 +85,86 @@ thead {
 }
 
 
-.-bg-primary{
+
+br {
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+}
+
+.-bg-primary {
     background-color: var(--primary-color) !important;
 }
-.-bg-secondary{
+
+.-bg-secondary {
     background-color: var(--secondary-color) !important;
 }
 
-.btn{
-    padding-right: 0% !important;
-    padding-left: 0%  !important;
-    align-content: center !important;
+
+
+.header-box {
+    overflow-y: auto !important;
+
+}
+
+.btn {
+    transition: all 950ms ease-in-out;
+    background-color: var(--enabled-btn);
+}
+
+.box:hover{
+    transform: scale(1.01);
+    box-shadow: var(--disabled-btn) 1px 1px 1px 1px !important;
+}
+
+.box {
+    background-color: var(--primary-color) !important;
+    transition: all 950ms ease-in-out;
     border-radius: 10px;
 }
-
-.btn:enabled {
-    color: var(--text-color);
-    transition: all 0.3s ease-in-out;
-    box-shadow: 1px 1px 5px var(--enabled-btn-shadow)!important;
+.box-wrapper {
+    margin-top: .75rem;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
 }
 
-.btn:hover {
-    transform: scale(1.01);
-    color: rgb(242, 238, 238);
+.table-container {
+    max-height: 25rem;
+    overflow-y: auto !important;
+    transition: all 950ms ease-in-out;
+    border-radius: .5rem;
 }
 
-.btn:disabled {
-    background-color: var(--disabled-btn) !important;
-    color: var(--text-color-disabled);
-    box-shadow: none;
+.table-bordered{
+    border: .1rem var(--text-color) solid !important;
 }
 
 
+.table-container::-webkit-scrollbar {
+    width: 1rem;
 
-/* Warnings */
+}
+.table-container::-webkit-scrollbar-corner{
+    background-color: transparent;
+}
+.table-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    border-radius: 22px;
+    height: 50%;
 
+}
+ 
+.table-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    color: var(--secondary-color);
+    background-color: #2b2a2a;
+    -webkit-box-shadow: inset 0 2 8px #1c1c1c 0.3;
 
+}
 
 /* Animations */
 
@@ -99,12 +176,17 @@ thead {
 
 /* Hid scrolbar */
 html {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
 }
-html::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+
+html::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
 }
+
 /*  */
 
 /* Hide up && down arrows on type: number inputs */
@@ -112,11 +194,76 @@ html::-webkit-scrollbar {
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
+
+
+
+/* factory table */
+
+th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.bill-column {
+    border: none;
+}
+
+.status-column {
+    padding: 0% !important;
+}
+
+.form-select {
+    border: none !important;
+    border-radius: 0px none !important;
+    height: 3rem !important;
+    background-color: transparent;
+    color: var(--text-color) !important;
+    stroke: var(--text-color) !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-position: left .75rem center;
+    background-size: 2rem 1.5rem;
+    padding: 0.375rem 0.75rem 0.375rem 2.25rem;
+    transition: all 450ms ease-in-out;
+}
+.form-select:hover{
+    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"); */
+    transform: rotate(360) !important;    
+}
+select:focus{
+    color: #ffffff;
+    background-color: #262626 !important;
+}
+
+.options{
+    border-top: white 5px solid !important;
+}
+@media (max-width: 576px) {
+    .status-column>select {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+
+.money{
+    text-align: center;
+    vertical-align: middle;
+}
+.btn{
+    color: var(--text-color) !important;
+}
+.btn:hover{
+    transform: scale(1.01);
+}
+input{
+    color: var(--dar-text-color);
+}
+

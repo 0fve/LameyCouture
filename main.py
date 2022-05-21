@@ -11,6 +11,7 @@ from sqlalchemy.exc import ProgrammingError
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/asessts", StaticFiles(directory="asessts"), name="asessts")
 
 templates = Jinja2Templates(directory="templates")
 

@@ -1,0 +1,63 @@
+<div class="row client-data-container text-white">
+
+    <p class="text-center mb-3 form-name display-2 fw-normal">تفصيل عباية لعميلة</p>
+    <form>
+        <div class="col client-data-form p-5">
+            <!-- Start Inputs -->
+            <div class="row">
+                <label for="orderNumber"
+                    class="col-3 col-xs-3 col-sm-2 col-md-2 col-lg-1 col-xl-2  col-form-label col-form-label-lg p-0">رقم
+                    الطلب</label>
+                <div class="col-5 col-sm-4 col-xs-2 col-md-3 col-lg-2 col-xl-2 p-0">
+                    <input type="number" class="form-control form-control-md rounded mx-3 browse-inputs"
+                        id="orderNumber" placeholder="رقم الطلب" min="1">
+                </div>
+            </div>
+
+            <div class="row mt-3 status-container">
+                <label for="phoneNumber"
+                    class="col-3 col-xs-3 col-sm-2 col-md-2 col-lg-1 col-xl-2  col-form-label col-form-label-lg p-0">رقم
+                    الهاتف</label>
+                <div class="col-5 col-sm-4 col-xs-2 col-md-3 col-lg-2 col-xl-2 p-0">
+                    <input type="number" class="form-control form-control-md rounded mx-3 browse-inputs"
+                        id="phoneNumber" placeholder="رقم الهاتف" pattern="^[0-9]{3,45}$">
+                </div>
+                <!-- <label for="phoneNumber" class="col-1" style="visibility: hidden;">ر</label> -->
+
+
+            </div>
+
+            <div class="row mt-3">
+                <label for="customerName"
+                    class="col-3 col-xs-3 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-form-label col-form-label-lg p-0">اسم
+                    العميلة</label>
+                <div class="col-8 col-xs-7 col-sm-10 col-md-8 col-lg-6 col-xl-6 p-0"
+                    style="align-self: center !important;">
+                    <input type="text" class="form-control form-control-md rounded mx-3 browse-inputs"
+                        id="customerName" placeholder="اسم العميلة">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <label for="productName"
+                    class="col-3 col-xs-3 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-form-label col-form-label-lg p-0">اسم
+                    العباية</label>
+                <div class="col-8 col-xs-7 col-sm-10 col-md-8 col-lg-6 col-xl-6 p-0"
+                    style="align-self: center !important;">
+                    <input type="text" class="form-control form-control-md rounded mx-3 browse-inputs"
+                        id="productName" placeholder="اسم العباية">
+                </div>
+            </div>
+            <div class="row mt-3">
+
+                <label for="arabicDescription"
+                    class="col-3 col-xs-3 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-form-label col-form-label-lg p-0">ملاحظات</label>
+
+                <div class="col-8 col-xs-7 col-sm-10 col-md-8 col-lg-6 col-xl-6 p-0"
+                    style="align-self: center !important;">
+                    <textarea class="form-control form-control-md rounded mx-3 browse-inputs" id="notes"
+                        placeholder="ملاحظات" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

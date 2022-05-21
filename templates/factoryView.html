@@ -19,121 +19,128 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
         rel="stylesheet">
-    </head>
-    <title>المصنع</title>
+</head>
+<title>المصنع</title>
 
 <body>
 
     <div class="container-fluid">
 
-        <div class="row text-white box-wrapper">
-            <div class="col-4 box">
-                <div class="p-3">
-                    <p class="text-center mb-2 form-name fs-4">عدد الطلبات</p>
-
-
-                    <p class="text-center mb-2 form-name fs-4">5</p>
+        <div class="row gx-3 text-white mt-2 mb-2">
+            <div class="col-6 first-row-status-columns">
+                <div class="py-1 h-100">
+                    <div class=" -bg-primary p-4 box h-100">
+                        <div class="header-box">
+                            <p class="fs-3 text-center">قيد الانشاء</p>
+                        </div>
+                        <div class="counter-box">
+                            <br>
+                            <p class="fs-3 text-center">5</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="col-6 first-row-status-columns">
+                <div class="py-1 h-100">
+                    <div class=" -bg-primary p-4 box h-100">
+                        <div class="header-box">
+                            <p class="fs-3 text-center">في القص</p>
+                        </div>
+                        <br>
+                        <div class="counter-box">
 
-            <div class="col-7 box wide-box">
-                <div class="p-3">
-                    <p class="text-center mb-2 form-name fs-4">الطلبات الجاهزه</p>
-
-
-                    <p class="text-center mb-2 form-name fs-4">3</p>
+                            <p class="fs-3 text-center">5</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
+        <div class="row gx-3 text-white">
+            <div class="col-6 col-sm-6 col-xl-4 second-row-status-columns">
+                <div class="py-1">
+                    <div class=" -bg-primary p-3 box">
+                        <div class="header-box">
+                            <p class="fs-3 text-center">في الخياطه</p>
+                        </div>
+                        <div class="counter-box">
+                            <p class="fs-3 text-center">5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-xl-4 second-row-status-columns">
+                <div class="py-1 h-100">
+                    <div class=" -bg-primary p-3 box h-100">
+                        <div class="header-box">
+                            <p class="fs-3 text-center">جاهز</p>
+                        </div>
+                        <div class="counter-box">
+                            <p class="fs-3 text-center">5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-4 second-row-status-columns mt-xl-0 mt-2">
+                <div class="py-1">
+                    <div class=" -bg-primary p-3 box ">
+                        <div class="header-box">
+                            <p class="fs-3 text-center">تم تسليم المندوب</p>
+                        </div>
+                        <div class="counter-box">
+                            <p class="fs-3 text-center">5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
         <div class="row text-white box-wrapper d-flex justify-content-center mb-3">
-            <div class="col-12 box table-container p-3">
+            <div class="col-12 -bg-primary table-container p-3">
                 <table class="table table-bordered text-white my-3">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">اسم العميلة</th>
-                            <th scope="col">العباية</th>
-                            <th scope="col">الملاحظات</th>
-                            <th scope="col" class="text-center">الفاتورة</th>
-                            <th scope="col">الحاله</th>
+                            <th class="fs-5" scope="col">#</th>
+                            <th class="fs-5" scope="col">اسم العميلة</th>
+                            <th class="fs-5" scope="col">العباية</th>
+                            <th class="fs-5" scope="col">الملاحظات</th>
+                            <th class="fs-5" scope="col">الفاتورة</th>
+                            <th class="fs-5" scope="col">الحاله</th>
+                            <th class="fs-5" scope="col">المدفوع</th>
+                            <th class="fs-5" scope="col">المتبقي</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for i in range(5) %}
                         <tr>
-                            <th scope="row">1</th>
+                            <th scope="row">{{i+1}}</th>
                             <td>مريم فهد</td>
                             <td>عباية الصيف</td>
                             <td>لون ازرق وتبديل الازرار الى سحاب</td>
-                            <td class="d-flex justify-content-evenly"><a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">استعراض</a> <a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">طباعة</a> <a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">تحميل</a> </td>
-                            <td>مكتمل</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>مريم فهد</td>
-                            <td>عباية الصيف</td>
-                            <td>لون ازرق وتبديل الازرار الى سحاب</td>
-                            <td class="d-flex justify-content-evenly"><a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">استعراض</a> <a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">طباعة</a> <a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">تحميل</a> </td>
-                            <td>مكتمل</td>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>مريم فهد</td>
-                            <td>عباية الصيف</td>
-                            <td>لون ازرق وتبديل الازرار الى سحاب</td>
-                            <td class="d-flex justify-content-evenly"><a class="mx-1"
+                            <td class="d-flex justify-content-evenly bill-column">
+                                <a class="mx-1"
                                     href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">استعراض</a> <a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">طباعة</a> <a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">تحميل</a> </td>
-                            <td>مكتمل</td>
+                                    target="_blank">استعراض</a>
+                                <a class="mx-1" target="_blank" id="print" onclick="print()"> طباعة</a>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>مريم فهد</td>
-                            <td>عباية الصيف</td>
-                            <td>لون ازرق وتبديل الازرار الى سحاب</td>
-                            <td class="d-flex justify-content-evenly"><a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">استعراض</a> <a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">طباعة</a> <a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">تحميل</a> </td>
-                            <td>غير جاهز</td>
+                                <a class="mx-1" href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png" download="invoice">تحميل</a>
+                            </td>
+                            <td class="status-column">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option style="color: white !important;" selected hidden>تحديد الحالة
+                                    </option>
+                                    <option class="options" value="1">قيد الانشاء</option>
+                                    <option class="options" value="2">جاهز</option>
+                                    <option class="options" value="3">تم تسليم المندوب</option>
 
+                                </select>
+                            </td>
+                            <td class="money">300</td>
+                            <td class="money">500</td>
                         </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>مريم فهد</td>
-                            <td>عباية الصيف</td>
-                            <td>لون ازرق وتبديل الازرار الى سحاب</td>
-                            <td class="d-flex justify-content-evenly"><a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">استعراض</a> <a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">طباعة</a> <a class="mx-1"
-                                    href="https://www.invoicesimple.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-4.19.31-PM-640x782.png"
-                                    target="_blank">تحميل</a> </td>
-                            <td>غير جاهز</td>
-
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -141,36 +148,8 @@
     </div>
 
 </body>
-<style>
-    .box {
-        background-color: var(--primary-color) !important;
-        border-radius: 10px;
-    }
-
-    .box-wrapper {
-        margin-top: 2.5em;
-    }
-
-    .wide-box {
-        margin-right: auto;
-    }
-
-    a {
-        color: lightblue;
-    }
-
-    .box-wrapper {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .table-container{
-        overflow-y:auto !important ;
-    }
-
-
-    
-</style>
+<style src="static/style.css"></style>
+<script src="static/factorView.js"></script>
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

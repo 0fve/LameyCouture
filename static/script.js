@@ -1,3 +1,6 @@
+
+
+
 function disableElementsAfterBrowsingInvoice(className) {
     elements = document.getElementsByClassName(className);
     for (element of elements) {
@@ -20,9 +23,9 @@ document.getElementById("orderNumber").addEventListener("keyup", (event) => {
 
             clientContainer = document.getElementsByClassName("status-container");
 
-            clientContainer[0].innerHTML += `<div class="col-3 col-sm-5 col-xs-2 col-md-4 col-lg-3 col-xl-3 p-0">
-            <input type="text" class="form-control form-control-md rounded mx-3 browse-inputs" id="orderStatus"
-                placeholder="حالة الطلب" value="${getOrderStatus()}" disabled></div>`
+            // clientContainer[0].innerHTML += `<div class="col-3 col-sm-5 col-xs-2 col-md-4 col-lg-3 col-xl-3 p-0">
+            // <input type="text" class="form-control form-control-md rounded mx-3 browse-inputs" id="orderStatus"
+            //     placeholder="حالة الطلب" value="${getOrderStatus()}" disabled></div>`
         }
     }
 })
@@ -33,3 +36,6 @@ function print() {
     frame.contentWindow.focus()
     frame.contentWindow.print()
 }
+
+
+

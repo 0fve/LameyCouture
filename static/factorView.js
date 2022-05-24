@@ -1,4 +1,7 @@
 
+
+
+
 // // Create a function for getting a variable value
 // function getCurrentThemeMode() {
 //     // Get the root element

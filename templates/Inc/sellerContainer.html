@@ -1,0 +1,80 @@
+<div class="row text-white mt-2">
+    <div class="col">
+        <div class="px-4 py-2 client-data-form items-container table-container">
+            <table class="table table-bordered text-white my-3">
+                <thead>
+                    <tr>
+                        <th class="fs-5" scope="col">#</th>
+                        <th class="fs-5" scope="col">رقم الصنف</th>
+                        <th class="fs-5" scope="col">اسم الصنف</th>
+                        <th class="fs-5" scope="col">الكمية</th>
+                        <th class="fs-5" scope="col">السعر</th>
+                        <th class="fs-5" scope="col">المجموع</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in range(1) %}
+                    <tr class="text-center">
+                        <th scope="row">{{i+1}}</th>
+                        <td class="p-0">
+                            <input type="text" class="form-control h-100" placeholder="الباركود">
+                        </td>
+                        <td>عباية الصيف</td>
+                        <td>25</td>
+                        <td>100</td>
+                        <td>2500</td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <!-- <div class="row text-center">
+                <div class="col-3 items-table-labels">
+                    <label> رقم الباركود</label>
+                </div>
+                <div class="col-6 items-table-labels item-name-label">
+                    <label> اسم الصنف</label>
+                </div>
+                <div class="col items-table-labels">
+                    <label> الكمية</label>
+                </div>
+                <div class="col-2 items-table-labels">
+                    <label> السعر</label>
+                </div>
+
+            </div> -->
+            {# for i in range(1) #}
+            <!-- <div class="row text-center">
+                <div class="col-3 items-table-labels">
+                    <input type="text" class="form-control w-100" placeholder="الباركود">
+                </div>
+                <div class="col-6 items-table-labels item-name-label">
+                    <p class="text text-center"> </p>
+                </div>
+                <div class="col items-table-labels">
+                    <p class="text text-center">  </p>
+                </div>
+                <div class="col-2 items-table-labels">
+                    <p class="text text-center">  </p>
+                </div>
+            </div> -->
+            {# endfor #}
+            {# for i in range(20) #}
+            <!-- <div class="row text-center">
+                <div class="col-3 items-table-labels">
+                    <input type="number" class="form-control w-100" placeholder="الباركود">
+                </div>
+                <div class="col-6 items-table-labels item-name-label">
+                    <p class="text text-center"> عبايه الصيف 20022</p>
+                </div>
+                <div class="col items-table-labels">
+                    <p class="text text-center"> 1 </p>
+                </div>
+                <div class="col-2 items-table-labels">
+                    <p class="text text-center"> 25 </p>
+                </div>
+            </div> -->
+            {# endfor #}
+        </div>
+    </div>
+</div>

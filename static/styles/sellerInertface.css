@@ -1,0 +1,17 @@
+.items-table-labels{
+   border: .75px var(--border-color) solid;
+   margin: 0;
+   border-top: 0;
+   padding: 0;
+   vertical-align: middle;
+}
+input{
+   border: 0px !important;
+   border-radius: 0 !important;
+   height: 100%;
+   width: 100%;
+}
+.items-container{
+   max-height: 30rem !important;
+   overflow-y: auto;
+}

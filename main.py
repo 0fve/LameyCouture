@@ -17,10 +17,12 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/measure")
 async def measure(request: Request):
-
-    return templates.TemplateResponse("measure.html",{"request":request})
+    return templates.TemplateResponse("measure.html",{"request":request, "title":"واجهة الموظفة"} )
 
 @app.get("/factory")
 async def factory(request: Request):
+    return templates.TemplateResponse("factoryView.html",{"request":request, "title":"واجهة المصنع"} )
 
-    return templates.TemplateResponse("factoryView.html",{"request":request})
+@app.get("/seller")
+async def factory(request: Request):
+    return templates.TemplateResponse("sellerInterface.html",{"request":request, "title":"واجهة البيع"} )

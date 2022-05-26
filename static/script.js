@@ -1,6 +1,5 @@
 
 
-
 function disableElementsAfterBrowsingInvoice(className) {
     elements = document.getElementsByClassName(className);
     for (element of elements) {

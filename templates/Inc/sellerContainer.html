@@ -4,12 +4,12 @@
             <table class="table table-bordered text-white my-3">
                 <thead>
                     <tr>
-                        <th class="fs-5" scope="col">#</th>
-                        <th class="fs-5" scope="col">رقم الصنف</th>
-                        <th class="fs-5" scope="col">اسم الصنف</th>
-                        <th class="fs-5" scope="col">الكمية</th>
-                        <th class="fs-5" scope="col">السعر</th>
-                        <th class="fs-5" scope="col">المجموع</th>
+                        <th class="fs-6" scope="col">#</th>
+                        <th class="fs-6" scope="col">رقم الصنف</th>
+                        <th class="fs-6" scope="col">اسم الصنف</th>
+                        <th class="fs-6" scope="col">الكمية</th>
+                        <th class="fs-6" scope="col">السعر</th>
+                        <th class="fs-6" scope="col">المجموع</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -17,12 +17,18 @@
                     <tr class="text-center">
                         <th scope="row">{{i+1}}</th>
                         <td class="p-0">
-                            <input type="text" class="form-control h-100" placeholder="الباركود">
+                            <input type="text" class="form-control h-100" >
                         </td>
-                        <td>عباية الصيف</td>
-                        <td>25</td>
-                        <td>100</td>
-                        <td>2500</td>
+                        <td></td>
+                        <td class="p-0">
+                            <input type="number" class="form-control h-100"  id="quantity" min="0">
+                        </td>
+                        <td class="p-0">
+                            <input type="number" class="form-control h-100"  id="price">
+                        </td>
+                        <td class="p-0">
+                            <span id="total" ></span>
+                        </td>
 
                     </tr>
                     {% endfor %}
@@ -78,3 +84,16 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById("price").addEventListener("keyup", () => {
+        let price = document.getElementById("price")
+        let qnt = document.getElementById("quantity")
+        
+        let total = document.getElementById("total")
+    
+        total.value = parseInt(price.value) * parseInt(qnt.value)
+        
+        console.log(total);
+    })
+</script>
